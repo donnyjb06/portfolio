@@ -14,6 +14,7 @@ const TECH_ICONS = [
 	{ language: "Jest", icon: SiJest },
 	{ language: "Express", icon: SiExpress },
 ];
+
 const EXPERIENCES: Experience[] = [
 	{
 		company: "Dailey Training Services",
