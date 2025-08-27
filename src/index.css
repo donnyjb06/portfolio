@@ -16,6 +16,7 @@
 	--background-light: hsl(240, 7%, 20%);
 	--background-dark: hsl(240, 4%, 17%);
 	--foreground: hsl(255, 100%, 100%);
+	--foreground-muted: hsl(0, 0, 33%);
 	--accent: hsl(240, 7%, 35%);
 }
 
