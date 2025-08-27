@@ -1,4 +1,4 @@
-import type { Props } from "../types";
+import type { Props } from "../types/ui";
 
 const GridContainer = ({children}: Props) => {
 	return (

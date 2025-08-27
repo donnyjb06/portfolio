@@ -2,7 +2,7 @@ import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill } from "react-icons/ri";
 import { SiMongodb, SiExpress, SiJest } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
-import type { Certification, Education, Experience, Project } from "../types";
+import type { Certification, Education, Experience, Project } from "../types/cells";
 
 const TECH_ICONS = [
 	{ language: "Tailwind CSS", icon: RiTailwindCssFill },
