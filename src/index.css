@@ -137,7 +137,7 @@
 		@apply w-full h-full;
 	}
 	#root {
-		@apply flex items-center justify-center p-4;
+		@apply flex items-center justify-center p-4; 
 	}
 }
 
@@ -171,7 +171,7 @@
 	}
 
 	.grid-cell--projects {
-		@apply order-4 sm:col-span-1 sm:row-span-2 lg:row-span-2 lg:col-span-2 lg:order-5 min-h-[500px] overflow-hidden;
+		@apply order-4 sm:col-span-1 sm:row-span-2 lg:row-span-2 lg:col-span-2 lg:order-5 max-h-[500px] overflow-hidden;
 	}
 
 	.grid-cell--connect {
