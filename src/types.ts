@@ -33,4 +33,8 @@ interface Project {
   achievements: string[];
 }
 
-export type { Theme, Experience, Education, Certification, Project };
+interface Props {
+  children: React.ReactNode
+}
+
+export type { Theme, Experience, Education, Certification, Project, Props };
