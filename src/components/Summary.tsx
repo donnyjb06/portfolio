@@ -1,0 +1,53 @@
+import headshot from "../assets/headshot.jpg";
+import glasses from "../assets/glasses.png";
+import Pill from "./Pill";
+import { MotionEffect } from "./animate-ui/effects/motion-effect";
+import {TypingText} from "./animate-ui/text/typing";
+
+const Summary = () => {
+	return (
+		<MotionEffect
+			className="grid-cell--summary grid-cell"
+			fade
+			blur="10px"
+			inView
+			transition={{ duration: 1 }}
+		>
+			<div className="">
+				<div className="flex justify-between gap-4">
+					<div className="relative overflow-hidden group">
+						<img
+							src={headshot}
+							className="rounded-lg"
+							alt="headshot of Donovan Jabbar"
+						/>
+						<img
+							src={glasses}
+							className="absolute -left-10 transition-all ease-out duration-200 group-hover:top-[22px] group-hover:left-7 w-[40px]"
+							alt="8-bit glasses"
+						/>
+					</div>
+					<div className="flex flex-col justify-between">
+						<Pill
+							text="Available To Work"
+							icon={
+								<span className="w-[7px] h-[7px] bg-success rounded-[50%] animate-pulse-glow "></span>
+							}
+						/>
+						<div className="flex flex-col gap-1 justify-between">
+							<h1 className="header">Donovan Jabbar</h1>
+							<TypingText
+								text="Full-Stack Developer"
+								duration={100}
+								delay={1000}
+								className="body-text text-primary"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</MotionEffect>
+	);
+};
+
+export default Summary;
