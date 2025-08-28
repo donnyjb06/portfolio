@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-	--background-light: hsl(240, 7%, 80%);
-	--background-dark: hsl(240, 7%, 77%);
+	--background-dark: hsl(0, 0, 100%);
+	--glass-bg: rgba(255, 255, 255, 0.5);
 	--foreground: hsl(240, 7%, 20%);
 	--foreground-muted: hsl(0, 0, 67%);
 	--accent: hsl(240, 7%, 65%);
-	--primary: hsl(217, 100%, 69%);
+	--primary: hsl(217, 100%, 30%);
 	--secondary: hsl(217, 100%, 78%);
 	--success: hsl(108, 100%, 74%);
 	--error: hsl(0, 100%, 74%);
@@ -44,8 +44,8 @@
 }
 
 .dark {
-	--background-light: hsl(240, 7%, 20%);
-	--background-dark: hsl(240, 4%, 17%);
+	--background-dark: hsl(0, 0, 0);
+	--glass-bg: rgba(0, 0, 0, 0.5);
 	--foreground: hsl(255, 100%, 100%);
 	--foreground-muted: hsl(0, 0, 63%);
 	--accent: hsl(240, 7%, 35%);
@@ -81,10 +81,10 @@
 }
 
 @theme inline {
+	--color-background-dark: var(--background-dark);
 	--font-inter: "Inter", sans-serif;
 	--animate-pulse-glow: pulse-glow 2s ease-in-out infinite alternate;
-	--color-background-light: var(--background-light);
-	--color-background-dark: var(--background-dark);
+	--color-glass-bg: var(--glass-bg) --color-foreground: var(--foreground);
 	--color-foreground: var(--foreground);
 	--color-foreground-muted: var(--foreground-muted);
 	--color-accent: var(--accent);
@@ -140,25 +140,17 @@
 		@apply w-full min-h-screen;
 	}
 	#root {
-		@apply flex lg:items-center lg:justify-center p-4 h-full; 
+		@apply flex lg:items-center lg:justify-center p-4 h-full;
 	}
 }
 
-@utility cell-gradient {
-	background-image: linear-gradient(
-		to bottom,
-		var(--background-light),
-		var(--background-dark)
-	);
-}
-
 @utility glass-morphism {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: var(--glass-bg);
 	backdrop-filter: blur(4px) saturate(200%);
-	border: 1px solid var(--border)
+	border: 1px solid var(--border);
 }
 @utility header-clamp {
-	font-size: clamp(16px, 2.5vw, 20px)
+	font-size: clamp(16px, 2.5vw, 20px);
 }
 @utility body-clamp {
 	font-size: clamp(12px, 2.5vw, 14px);
@@ -171,7 +163,7 @@
 	.header {
 		@apply header-clamp font-bold;
 	}
-	
+
 	.grid-cell {
 		@apply rounded-2xl p-4 w-full h-full glass-morphism;
 	}
@@ -205,10 +197,10 @@
 	from {
 		box-shadow: 0 0 10px hsla(108, 100%, 74%, 0.3);
 		opacity: 1;
-		scale: 1; 
+		scale: 1;
 	}
 	to {
-		box-shadow: 0 0 4px hsla(108, 100%, 74%, 0.1); 
+		box-shadow: 0 0 4px hsla(108, 100%, 74%, 0.1);
 		opacity: 0.5;
 		scale: 0.95;
 	}

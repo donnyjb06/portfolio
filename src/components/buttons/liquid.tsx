@@ -11,10 +11,10 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"text-primary hover:text-primary-foreground !bg-muted [--liquid-button-color:var(--primary)]",
+					"text-foreground hover:text-background-dark !bg-muted [--liquid-button-color:var(--primary)]",
 				outline:
 					"border !bg-background dark:!bg-input/30 dark:border-input [--liquid-button-color:var(--primary)]",
-				secondary:
+				secondary: 
 					"text-secondary hover:text-secondary-foreground !bg-muted [--liquid-button-color:var(--secondary)]",
 			},
 			size: {
