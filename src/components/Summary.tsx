@@ -4,7 +4,10 @@ import Pill from "./Pill";
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
 import { TypingText } from "./animate-ui/text/typing";
 import PillBox from "./PillBox";
-import { SUMMARY_PILLS } from "../lib/constants";
+import { SOCIALS, SUMMARY_PILLS } from "../lib/constants";
+import LiquidButton from "./LiquidButton";
+import { PiInstagramLogoFill } from "react-icons/pi";
+import { FaLinkedin } from "react-icons/fa";
 
 const Summary = () => {
 	return (
@@ -50,7 +53,10 @@ const Summary = () => {
 						<Pill icon={<pill.icon className="text-primary"/>} text={pill.text} key={i} />
 					))}
 				</PillBox>
-				<div className="flex gap-4"></div>
+				<div className="flex gap-2 flex-col sm:flex-row">
+				<LiquidButton text="Instagram" link={SOCIALS.instagram} Icon={PiInstagramLogoFill}/>
+				<LiquidButton text="LinkedIn" link={SOCIALS.linkedIn} Icon={FaLinkedin}/>
+				</div>
 			</div>
 		</MotionEffect>
 	);
