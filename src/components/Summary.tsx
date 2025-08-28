@@ -2,7 +2,9 @@ import headshot from "../assets/headshot.jpg";
 import glasses from "../assets/glasses.png";
 import Pill from "./Pill";
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
-import {TypingText} from "./animate-ui/text/typing";
+import { TypingText } from "./animate-ui/text/typing";
+import PillBox from "./PillBox";
+import { SUMMARY_PILLS } from "../lib/constants";
 
 const Summary = () => {
 	return (
@@ -13,8 +15,8 @@ const Summary = () => {
 			inView
 			transition={{ duration: 1 }}
 		>
-			<div className="">
-				<div className="flex justify-between gap-4">
+			<div className="flex flex-col justify-between h-full gap-6">
+				<div className="flex gap-4">
 					<div className="relative overflow-hidden group">
 						<img
 							src={headshot}
@@ -38,13 +40,17 @@ const Summary = () => {
 							<h1 className="header">Donovan Jabbar</h1>
 							<TypingText
 								text="Full-Stack Developer"
-								duration={100}
-								delay={1000}
-								className="body-text text-primary"
+								className="body-text text-primary font-medium"
 							/>
 						</div>
 					</div>
 				</div>
+				<PillBox>
+					{SUMMARY_PILLS.map((pill, i) => (
+						<Pill icon={<pill.icon className="text-primary"/>} text={pill.text} key={i} />
+					))}
+				</PillBox>
+				<div className="flex gap-4"></div>
 			</div>
 		</MotionEffect>
 	);

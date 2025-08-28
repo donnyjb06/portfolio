@@ -1,8 +1,12 @@
-import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill, RiGraduationCapFill} from "react-icons/ri";
 import { SiMongodb, SiExpress, SiJest } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import type { Certification, Education, Experience, Project } from "../types/cells";
+import { FaMapPin, FaLanguage,  } from "react-icons/fa";
+import { GoClockFill } from "react-icons/go";
+
+
 
 const TECH_ICONS = [
 	{ language: "Tailwind CSS", icon: RiTailwindCssFill },
@@ -127,4 +131,23 @@ const SOCIALS: Record<string, string> = {
 	instagram: "https://www.instagram.com/donnyyvenyaaa/",
 };
 
-export { TECH_ICONS, EXPERIENCES, EDUCATION, CERTIFICATIONS, SOCIALS, PROJECTS };
+const SUMMARY_PILLS = [
+	{
+		icon: FaMapPin,
+		text: "Texas" 
+	},
+	{
+		icon: FaLanguage,
+		text: "English & Spanish"
+	},
+	{
+		icon: RiGraduationCapFill,
+		text: "Triple Ten SWE Bootcamp" 
+	},
+	{
+		icon: GoClockFill,
+		text: "CST"
+	},
+]
+
+export { TECH_ICONS, EXPERIENCES, EDUCATION, CERTIFICATIONS, SOCIALS, PROJECTS, SUMMARY_PILLS };
