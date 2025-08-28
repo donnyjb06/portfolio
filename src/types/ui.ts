@@ -4,4 +4,9 @@ interface Props {
 
 type Theme = "light" | "dark";
 
-export type { Props, Theme };
+interface ThemeContext {
+	theme: Theme | undefined;
+	toggleTheme: () => void;
+}
+
+export type { Props, ThemeContext, Theme };
