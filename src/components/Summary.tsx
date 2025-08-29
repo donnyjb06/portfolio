@@ -9,15 +9,13 @@ import LiquidButton from "./LiquidButton";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
+import { getMotionProps } from "../lib/utils";
 
 const Summary = () => {
 	return (
 		<MotionEffect
 			className="grid-cell--summary grid-cell"
-			fade
-			blur="10px"
-			inView
-			transition={{ duration: 1 }}
+		{...getMotionProps()}
 		>
 			<div className="flex flex-col justify-between h-full gap-6">
 				<div className="flex gap-4">

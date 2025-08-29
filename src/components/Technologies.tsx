@@ -3,16 +3,13 @@ import { FaBomb } from "react-icons/fa";
 import { InfiniteSlider } from "./InfiniteSlider";
 import { TECH_ICONS } from "../lib/constants";
 import { Tooltip, TooltipTrigger, TooltipContent } from "./ToolTip";
+import { getMotionProps } from "../lib/utils";
 
 const Technologies = () => {
 	return (
 		<MotionEffect className="grid-cell grid-cell--technologies overflow-x-hidden"
-			fade
-			blur="10px"
-			inView
-      delay={0.5}
-			transition={{ duration: 1 }}
-     >
+     {...getMotionProps(0.5)}>
+
 			<div className="flex flex-col items-center gap-2 justify-center h-full">
 				<div className="flex gap-2 items-center mb-auto">
           <FaBomb className="text-primary"/>
