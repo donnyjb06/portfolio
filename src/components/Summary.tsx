@@ -33,7 +33,7 @@ const Summary = ({delay}: CellProps) => {
 						/>
 					</div>
 					<div className="flex flex-col justify-between grow">
-						<div className="flex gap-2 justify-between flex-wrap-reverse:">
+						<div className="flex gap-2 justify-between flex-wrap-reverse">
 							<Pill
 								text="Available To Work"
 								icon={
@@ -45,8 +45,8 @@ const Summary = ({delay}: CellProps) => {
 						<div className="flex flex-col gap-1 justify-between">
 							<h1 className="header">Donovan Jabbar</h1>
 							<TypingText
-								text="Full-Stack Developer"
-								className="body-text text-primary font-medium"
+								text="Full-Stack Web Developer"
+								className="body-text text-primary font-medium whitespace-nowrap"
 							/>
 						</div>
 					</div>
