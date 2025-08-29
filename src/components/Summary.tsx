@@ -34,7 +34,7 @@ const Summary = () => {
 						/>
 					</div>
 					<div className="flex flex-col justify-between grow">
-						<div className="flex gap-2 justify-between flex-wrap-reverse">
+						<div className="flex gap-2 justify-between flex-wrap-reverse:">
 							<Pill
 								text="Available To Work"
 								icon={
