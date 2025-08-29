@@ -1,12 +1,20 @@
-import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill, RiGraduationCapFill} from "react-icons/ri";
+import {
+	RiTailwindCssFill,
+	RiNextjsFill,
+	RiReactjsFill,
+	RiGraduationCapFill,
+} from "react-icons/ri";
 import { SiMongodb, SiExpress, SiJest } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
-import type { Certification, Education, Experience, Project } from "../types/cells";
-import { FaMapPin, FaLanguage,  } from "react-icons/fa";
+import type {
+	Certification,
+	Education,
+	Experience,
+	Project,
+} from "../types/cells";
+import { FaMapPin, FaLanguage } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
-
-
 
 const TECH_ICONS = [
 	{ language: "Tailwind CSS", icon: RiTailwindCssFill },
@@ -23,8 +31,8 @@ const EXPERIENCES: Experience[] = [
 	{
 		company: "Dailey Training Services",
 		title: "Front End React Developer",
-		startDate: new Date(2025, 2),
-		endDate: new Date(2025, 4),
+		startDate: new Date(2025, 1),
+		endDate: new Date(2025, 3),
 		responsibilities: [
 			"Increased technician training efficiency by 40% by leading the design and development of a modular workforce and emergency response app for wind turbine crews, integrating AR, biometrics, and satellite tech",
 			"Improved system scalability and user adoption across multiple job sites by unifying UX strategy with front-end development to deliver a secure, intuitive interface",
@@ -77,7 +85,14 @@ const PROJECTS: Project[] = [
 		githubLink: "https://github.com/donnyjb06/mock-interview-platform",
 		description:
 			"An AI-powered web app offering personalized mock interview sessions, real-time feedback, and performance tracking to help users improve their interview skills.",
-		technologies: ["Firebase", "Google Gemini", "Next.js", "Tailwind", "Vapi", "TypeScript"],
+		technologies: [
+			"Firebase",
+			"Google Gemini",
+			"Next.js",
+			"Tailwind",
+			"Vapi",
+			"TypeScript",
+		],
 		link: "https://mock-interview-platform-mu.vercel.app/",
 		achievements: [
 			"Created an adaptive mock interview experience by designing an AI-driven workflow that dynamically generates, presents, and evaluates question sets based on role, level, and question type",
@@ -108,21 +123,22 @@ const PROJECTS: Project[] = [
 		achievements: [
 			"Increased user productivity by 30% on average, enabling focused work sessions through customizable Pomodoro cycles with automated work/break transitions",
 			"Enhanced usability and accessibility by delivering a 100% responsive UI with dark/light themes, achieving cross-device compatibility across desktop and mobile",
-			"Improved adoption by reducing setup time by 50%, leveraging persistent session tracking and intuitive notifications to streamline the user experience"
-		]
+			"Improved adoption by reducing setup time by 50%, leveraging persistent session tracking and intuitive notifications to streamline the user experience",
+		],
 	},
 	{
 		name: "Contact Manager API",
 		githubLink: "https://github.com/donnyjb06/contact-manager",
-		description: "A contact manager API built on top of Express and MongoDB. This API supports creating, updating, retrieving, and deleting contacts, with user authentication and protected routes.",
+		description:
+			"A contact manager API built on top of Express and MongoDB. This API supports creating, updating, retrieving, and deleting contacts, with user authentication and protected routes.",
 		technologies: ["Express", "TypeScript"],
-		link: null, 
+		link: null,
 		achievements: [
 			"Developed a RESTful API with Express and MongoDB to manage contacts, supporting CRUD operations with authentication and authorization via JWT",
 			"Implemented user authentication (registration, login, access token management) and secured protected endpoints requiring bearer tokens",
-			"Designed and enforced Contact schema with TypeScript and Mongoose, including validation for user-specific ownership"
-		]
-	}
+			"Designed and enforced Contact schema with TypeScript and Mongoose, including validation for user-specific ownership",
+		],
+	},
 ];
 
 const SOCIALS: Record<string, string> = {
@@ -134,22 +150,31 @@ const SOCIALS: Record<string, string> = {
 const SUMMARY_PILLS = [
 	{
 		icon: FaMapPin,
-		text: "Texas" 
+		text: "Texas",
 	},
 	{
 		icon: FaLanguage,
-		text: "English & Spanish"
+		text: "English & Spanish",
 	},
 	{
 		icon: RiGraduationCapFill,
-		text: "Triple Ten SWE Bootcamp" 
+		text: "Triple Ten SWE Bootcamp",
 	},
 	{
 		icon: GoClockFill,
-		text: "CST"
+		text: "CST",
 	},
-]
+];
 
 const MOTION_DELAY = 0.25;
 
-export { TECH_ICONS, EXPERIENCES, EDUCATION, CERTIFICATIONS, SOCIALS, PROJECTS, SUMMARY_PILLS, MOTION_DELAY };
+export {
+	TECH_ICONS,
+	EXPERIENCES,
+	EDUCATION,
+	CERTIFICATIONS,
+	SOCIALS,
+	PROJECTS,
+	SUMMARY_PILLS,
+	MOTION_DELAY,
+};
