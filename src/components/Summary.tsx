@@ -10,12 +10,13 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import { getMotionProps } from "../lib/utils";
+import type { CellProps } from "../types/ui";
 
-const Summary = () => {
+const Summary = ({delay}: CellProps) => {
 	return (
 		<MotionEffect
 			className="grid-cell--summary grid-cell"
-		{...getMotionProps()}
+		{...getMotionProps(delay)}
 		>
 			<div className="flex flex-col justify-between h-full gap-6">
 				<div className="flex gap-4">
