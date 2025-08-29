@@ -9,19 +9,17 @@ interface LiquidButtonProps {
 }
 const LiquidButton = ({ Icon, text, onClick, link }: LiquidButtonProps) => {
 	return (
-		<AnimatedButton onClick={onClick} className="group grow">
-			<a
-				href={link}
-				target="_blank"
-				className="flex gap-2 text-foreground items-center"
-			>
-				<Icon
-					className="text-primary group-hover:text-foreground delay-300"
-					style={{ width: "20px", height: "20px" }}
-				/>
-				{text}
-			</a>
-		</AnimatedButton>
+		<a href={link} className="group grow" target="_blank">
+			<AnimatedButton onClick={onClick} className="w-full">
+				<p className="flex gap-2 text-foreground items-center">
+					<Icon
+						className="text-primary group-hover:text-foreground delay-300"
+						style={{ width: "20px", height: "20px" }}
+					/>
+					{text}
+				</p>
+			</AnimatedButton>
+		</a>
 	);
 };
 
