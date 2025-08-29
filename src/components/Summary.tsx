@@ -21,7 +21,7 @@ const Summary = () => {
 		>
 			<div className="flex flex-col justify-between h-full gap-6">
 				<div className="flex gap-4">
-					<div className="relative overflow-hidden group">
+					<div className="relative overflow-hidden shrink-0 group">
 						<img
 							src={headshot}
 							className="rounded-lg"
@@ -34,7 +34,7 @@ const Summary = () => {
 						/>
 					</div>
 					<div className="flex flex-col justify-between grow">
-						<div className="flex gap-2 justify-between">
+						<div className="flex gap-2 justify-between flex-wrap-reverse">
 							<Pill
 								text="Available To Work"
 								icon={
