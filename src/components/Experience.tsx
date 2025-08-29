@@ -19,7 +19,7 @@ const Experience = ({ experience }: ExperienceProps) => {
 				}).format(experience.endDate);
 
 	return (
-		<li className="flex flex-col gap-2 p-2 rounded-md glass-morphism">
+		<li className="cell-list-item">
 			<div className="flex flex-col">
 				<h3 className="font-bold body-text text-primary">
 					{experience.title},{" "}
@@ -31,11 +31,13 @@ const Experience = ({ experience }: ExperienceProps) => {
 					{startDate} - {endDate}
 				</p>
 			</div>
-      <ul className="flex flex-col gap-1">
-        {experience.responsibilities.map((text, i) => (
-          <li key={i} className="list-disc list-inside body-text">{text}</li>
-        ))}
-      </ul>
+			<ul className="flex flex-col gap-1">
+				{experience.responsibilities.map((text, i) => (
+					<li key={i} className="list-disc list-inside body-text">
+						{text}
+					</li>
+				))}
+			</ul>
 		</li>
 	);
 };

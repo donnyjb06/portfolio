@@ -12,7 +12,7 @@ const Experiences = ({ delay }: CellProps) => {
 	return (
 		<MotionEffect
       ref={containerRef}
-			className="grid-cell grid-cell--experiences max-h-[300px] grid-cell-scrollable"
+			className="grid-cell grid-cell--experiences  grid-cell--scrollable"
 			{...getMotionProps(delay)}
 		>
 			<ScrollProgress
@@ -24,12 +24,12 @@ const Experiences = ({ delay }: CellProps) => {
 				}}
         containerRef={containerRef}
 			/>
-			<div className="flex flex-col items-center gap-4 p-4">
-				<div className="flex items-center gap-2">
+			<div className="grid-cell-container">
+				<div className="grid-cell-heading">
 					<MdWork className="text-primary" />
 					<h2 className="subtitle">Work Experience</h2>
 				</div>
-				<ul className="flex flex-col gap-4">
+				<ul className="grid-list">
 					{EXPERIENCES.map((experience, i) => (
 						<Experience experience={experience} key={i} />
 					))}
