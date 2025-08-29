@@ -132,7 +132,7 @@ const PROJECTS: Project[] = [
 		description:
 			"A contact manager API built on top of Express and MongoDB. This API supports creating, updating, retrieving, and deleting contacts, with user authentication and protected routes.",
 		technologies: ["Express", "TypeScript"],
-		link: null,
+		link: undefined,
 		achievements: [
 			"Developed a RESTful API with Express and MongoDB to manage contacts, supporting CRUD operations with authentication and authorization via JWT",
 			"Implemented user authentication (registration, login, access token management) and secured protected endpoints requiring bearer tokens",
