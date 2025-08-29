@@ -9,15 +9,14 @@ import LiquidButton from "./LiquidButton";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
+import { getMotionProps } from "../lib/utils";
+import type { CellProps } from "../types/ui";
 
-const Summary = () => {
+const Summary = ({delay}: CellProps) => {
 	return (
 		<MotionEffect
 			className="grid-cell--summary grid-cell"
-			fade
-			blur="10px"
-			inView
-			transition={{ duration: 1 }}
+		{...getMotionProps(delay)}
 		>
 			<div className="flex flex-col justify-between h-full gap-6">
 				<div className="flex gap-4">
@@ -34,7 +33,7 @@ const Summary = () => {
 						/>
 					</div>
 					<div className="flex flex-col justify-between grow">
-						<div className="flex gap-2 justify-between flex-wrap-reverse:">
+						<div className="flex gap-2 justify-between flex-wrap-reverse">
 							<Pill
 								text="Available To Work"
 								icon={
@@ -46,8 +45,8 @@ const Summary = () => {
 						<div className="flex flex-col gap-1 justify-between">
 							<h1 className="header">Donovan Jabbar</h1>
 							<TypingText
-								text="Full-Stack Developer"
-								className="body-text text-primary font-medium"
+								text="Full-Stack Web Developer"
+								className="body-text text-primary font-medium whitespace-nowrap"
 							/>
 						</div>
 					</div>

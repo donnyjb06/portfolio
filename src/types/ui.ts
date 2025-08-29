@@ -9,4 +9,8 @@ interface ThemeContext {
 	toggleTheme: () => void;
 }
 
-export type { Props, ThemeContext, Theme };
+interface CellProps {
+	delay?: number;
+}
+
+export type { Props, ThemeContext, Theme, CellProps };

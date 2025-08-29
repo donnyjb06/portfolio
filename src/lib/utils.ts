@@ -13,4 +13,15 @@ const getInitialTheme = () => {
   return theme
 };
 
-export { cn, getInitialTheme };
+const getMotionProps = (delay?: number) => {
+	return {
+
+			fade: true,
+			blur: "10px",
+			inView: true,
+      delay: delay || 0,
+			transition: { duration: 1 }
+	}
+}
+
+export { cn, getInitialTheme, getMotionProps };
