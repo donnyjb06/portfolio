@@ -56,25 +56,25 @@ const CERTIFICATIONS: Certification[] = [
 	{
 		name: "Web Developer",
 		issuer: "TestDome",
-		issueDate: new Date(2025, 3),
+		issueDate: new Date(2025, 2),
 		link: "https://www.testdome.com/certificates/e0d5bbab5e674eb6af96fcaa42240332",
 	},
 	{
 		name: "Learn React",
 		issuer: "Scrimba",
-		issueDate: new Date(2025, 1),
+		issueDate: new Date(2025, 0),
 		link: "https://scrimba.com/certificate-cert2uNjfKA1NC3fERYh5XBPW7Rn91PHb2BWJDN",
 	},
 	{
 		name: "Introduction to ES6+",
 		issuer: "Scrimba",
-		issueDate: new Date(2024, 11),
+		issueDate: new Date(2024, 10),
 		link: "https://scrimba.com/certificate-cert2uNjfKA1NC3fERYh5XBPZqAbMMJdViDfCBM",
 	},
 	{
 		name: "Learn Typescript",
 		issuer: "Scrimba",
-		issueDate: new Date(2024, 11),
+		issueDate: new Date(2024, 10),
 		link: "https://scrimba.com/certificate-cert24zAw%20J78kcXkjkFLsvaKTtsXAqxjE718rCd1k",
 	},
 ];
@@ -143,7 +143,7 @@ const PROJECTS: Project[] = [
 
 const SOCIALS: Record<string, string> = {
 	linkedIn: "https://www.linkedin.com/in/donovan-jabbar-b99955302/",
-	email: "djabbar51@gmail.com",
+	email: "thedonnydev@gmail.com",
 	instagram: "https://www.instagram.com/donnyyvenyaaa/",
 };
 
