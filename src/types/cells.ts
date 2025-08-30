@@ -1,3 +1,5 @@
+import type { IconType } from "react-icons";
+
 interface Experience {
 	company: string;
 	title: string;
@@ -31,4 +33,9 @@ interface Project {
 	achievements: string[];
 }
 
-export type { Experience, Education, Certification, Project };
+interface Technology {
+	technology: string;
+	icon: IconType;
+}
+  
+export type { Experience, Education, Certification, Project, Technology };

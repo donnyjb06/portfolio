@@ -4,7 +4,7 @@ import {
 	RiReactjsFill,
 	RiGraduationCapFill,
 } from "react-icons/ri";
-import { SiMongodb, SiExpress, SiJest } from "react-icons/si";
+import { SiMongodb, SiExpress, SiJest, SiNeovim } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import type {
@@ -12,19 +12,23 @@ import type {
 	Education,
 	Experience,
 	Project,
+	Technology,
 } from "../types/cells";
 import { FaMapPin, FaLanguage } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
+import { DiGoogleCloudPlatform } from "react-icons/di";
 
-const TECH_ICONS = [
-	{ language: "Tailwind CSS", icon: RiTailwindCssFill },
-	{ language: "TypeScript", icon: BiLogoTypescript },
-	{ language: "Next.Js", icon: RiNextjsFill },
-	{ language: "MongoDB", icon: SiMongodb },
-	{ language: "React", icon: RiReactjsFill },
-	{ language: "Sass", icon: IoLogoSass },
-	{ language: "Jest", icon: SiJest },
-	{ language: "Express", icon: SiExpress },
+const TECH_ICONS: Technology[] = [
+	{ technology: "Tailwind CSS", icon: RiTailwindCssFill },
+	{ technology: "TypeScript", icon: BiLogoTypescript },
+	{ technology: "Next.Js", icon: RiNextjsFill },
+	{ technology: "MongoDB", icon: SiMongodb },
+	{ technology: "React", icon: RiReactjsFill },
+	{ technology: "Sass", icon: IoLogoSass },
+	{ technology: "Jest", icon: SiJest },
+	{ technology: "Express", icon: SiExpress },
+	{ technology: "Neovim", icon: SiNeovim },
+	{ technology: "Google Cloud Platform", icon: DiGoogleCloudPlatform },
 ];
 
 const EXPERIENCES: Experience[] = [
@@ -43,8 +47,8 @@ const EXPERIENCES: Experience[] = [
 	{
 		company: "Triple Ten July Code Jam",
 		title: "Front End React Developer",
-		startDate: new Date(2025, 6), 
-		endDate: new Date(2025, 6), 
+		startDate: new Date(2025, 6),
+		endDate: new Date(2025, 6),
 		responsibilities: [
 			"Led a team of web developers to create a sightseeing route optimizer",
 			"Optimized routes by nearly 45%, improving efficiency and user experience",

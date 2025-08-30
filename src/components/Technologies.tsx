@@ -18,11 +18,11 @@ const Technologies = ({delay}: CellProps) => {
 				</div>
         <InfiniteSlider className="w-full z-10 relative mb-auto" speed={30} gap={20} speedOnHover={1} reverse >
           {TECH_ICONS.map(tech => (
-            <Tooltip key={tech.language}>
+            <Tooltip key={tech.technology}>
               <TooltipTrigger className="relative z-20" asChild>
                 <tech.icon className="text-3xl text-muted-foreground hover:text-primary hover:scale-110 duration-300 "/>
               </TooltipTrigger>
-              <TooltipContent className="glass-morphism text-foreground">{ tech.language }</TooltipContent>
+              <TooltipContent className="glass-morphism text-foreground">{ tech.technology }</TooltipContent>
             </Tooltip>
           ))}
         </InfiniteSlider>
