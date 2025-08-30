@@ -9,7 +9,7 @@ interface LiquidButtonProps {
 }
 const LiquidButton = ({ Icon, text, onClick, link }: LiquidButtonProps) => {
 	return (
-		<a href={link} className="group grow" target="_blank">
+		<a href={link} className="group grow flex-1 sm:max-w-[50%]" target="_blank">
 			<AnimatedButton onClick={onClick} className="w-full">
 				<p className="flex gap-2 text-foreground items-center">
 					<Icon
