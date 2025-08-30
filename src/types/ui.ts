@@ -13,4 +13,5 @@ interface CellProps {
 	delay?: number;
 }
 
+
 export type { Props, ThemeContext, Theme, CellProps };
