@@ -20,7 +20,7 @@ const Technologies = ({delay}: CellProps) => {
           {TECH_ICONS.map(tech => (
             <Tooltip key={tech.language}>
               <TooltipTrigger className="relative z-20" asChild>
-                <tech.icon className="text-3xl text-muted-foreground"/>
+                <tech.icon className="text-3xl text-muted-foreground hover:text-primary hover:scale-110 duration-300 "/>
               </TooltipTrigger>
               <TooltipContent className="glass-morphism text-foreground">{ tech.language }</TooltipContent>
             </Tooltip>

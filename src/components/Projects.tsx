@@ -1,19 +1,20 @@
-import { EXPERIENCES } from "../lib/constants";
-import { getMotionProps } from "../lib/utils";
-import type { CellProps } from "../types/ui";
+import { PROJECTS } from "../lib/constants";
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
-import { MdWork } from "react-icons/md";
-import Experience from "./Experience";
+import type { CellProps } from "../types/ui";
+import { getMotionProps } from "../lib/utils";
 import { ScrollProgress } from "./animate-ui/effects/scroll-progress";
 import { useRef } from "react";
+import { FaFolderOpen } from "react-icons/fa";
+import Project from "./Project";
 import ScrollHint from "./ScrollHint";
 
-const Experiences = ({ delay }: CellProps) => {
+const Projects = ({ delay }: CellProps) => {
 	const containerRef = useRef<HTMLDivElement | null>(null);
+
 	return (
 		<MotionEffect
 			ref={containerRef}
-			className="grid-cell grid-cell--experiences  grid-cell--scrollable"
+			className="grid-cell grid-cell--projects grid-cell--scrollable"
 			{...getMotionProps(delay)}
 		>
 			<ScrollProgress
@@ -27,12 +28,12 @@ const Experiences = ({ delay }: CellProps) => {
 			/>
 			<div className="grid-cell-container">
 				<div className="grid-cell-heading">
-					<MdWork className="text-primary" />
-					<h2 className="subtitle">Work Experience</h2>
+					<FaFolderOpen className="text-primary" />
+					<h2 className="subtitle">Projects</h2>
 				</div>
 				<ul className="grid-list">
-					{EXPERIENCES.map((experience, i) => (
-						<Experience experience={experience} key={i} />
+					{PROJECTS.map((project, i) => (
+						<Project project={project} key={i} />
 					))}
 				</ul>
 			</div>
@@ -41,4 +42,4 @@ const Experiences = ({ delay }: CellProps) => {
 	);
 };
 
-export default Experiences;
+export default Projects;

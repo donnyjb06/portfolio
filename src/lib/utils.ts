@@ -18,7 +18,7 @@ const getMotionProps = (delay?: number) => {
 
 			fade: true,
 			blur: "10px",
-			inView: true,
+			inView: false,
       delay: delay || 0,
 			transition: { duration: 1 }
 	}

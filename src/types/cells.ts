@@ -27,7 +27,7 @@ interface Project {
 	githubLink: string;
 	description: string;
 	technologies: string[];
-	link: string | null;
+	link: string | undefined;
 	achievements: string[];
 }
 

@@ -40,6 +40,18 @@ const EXPERIENCES: Experience[] = [
 		],
 		location: "Remote",
 	},
+	{
+		company: "Triple Ten July Code Jam",
+		title: "Front End React Developer",
+		startDate: new Date(2025, 6), 
+		endDate: new Date(2025, 6), 
+		responsibilities: [
+			"Led a team of web developers to create a sightseeing route optimizer",
+			"Optimized routes by nearly 45%, improving efficiency and user experience",
+			"Won the Triple Ten July Code Jam competition for the best project",
+		],
+		location: "Remote",
+	},
 ];
 
 const EDUCATION: Education[] = [
@@ -56,25 +68,25 @@ const CERTIFICATIONS: Certification[] = [
 	{
 		name: "Web Developer",
 		issuer: "TestDome",
-		issueDate: new Date(2025, 3),
+		issueDate: new Date(2025, 2),
 		link: "https://www.testdome.com/certificates/e0d5bbab5e674eb6af96fcaa42240332",
 	},
 	{
 		name: "Learn React",
 		issuer: "Scrimba",
-		issueDate: new Date(2025, 1),
+		issueDate: new Date(2025, 0),
 		link: "https://scrimba.com/certificate-cert2uNjfKA1NC3fERYh5XBPW7Rn91PHb2BWJDN",
 	},
 	{
 		name: "Introduction to ES6+",
 		issuer: "Scrimba",
-		issueDate: new Date(2024, 11),
+		issueDate: new Date(2024, 10),
 		link: "https://scrimba.com/certificate-cert2uNjfKA1NC3fERYh5XBPZqAbMMJdViDfCBM",
 	},
 	{
 		name: "Learn Typescript",
 		issuer: "Scrimba",
-		issueDate: new Date(2024, 11),
+		issueDate: new Date(2024, 10),
 		link: "https://scrimba.com/certificate-cert24zAw%20J78kcXkjkFLsvaKTtsXAqxjE718rCd1k",
 	},
 ];
@@ -132,7 +144,7 @@ const PROJECTS: Project[] = [
 		description:
 			"A contact manager API built on top of Express and MongoDB. This API supports creating, updating, retrieving, and deleting contacts, with user authentication and protected routes.",
 		technologies: ["Express", "TypeScript"],
-		link: null,
+		link: undefined,
 		achievements: [
 			"Developed a RESTful API with Express and MongoDB to manage contacts, supporting CRUD operations with authentication and authorization via JWT",
 			"Implemented user authentication (registration, login, access token management) and secured protected endpoints requiring bearer tokens",
@@ -143,7 +155,7 @@ const PROJECTS: Project[] = [
 
 const SOCIALS: Record<string, string> = {
 	linkedIn: "https://www.linkedin.com/in/donovan-jabbar-b99955302/",
-	email: "djabbar51@gmail.com",
+	email: "thedonnydev@gmail.com",
 	instagram: "https://www.instagram.com/donnyyvenyaaa/",
 };
 
