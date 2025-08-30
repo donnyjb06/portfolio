@@ -31,13 +31,16 @@ const Experience = ({ experience }: ExperienceProps) => {
 					{startDate} - {endDate}
 				</p>
 			</div>
-			<ul className="flex flex-col gap-1">
-				{experience.responsibilities.map((text, i) => (
-					<li key={i} className="list-disc list-inside body-text">
-						{text}
-					</li>
-				))}
-			</ul>
+			<div className="flex flex-col">
+				<h3 className="body-text font-bold">Responsibilities:</h3>
+				<ul className="flex flex-col gap-1">
+					{experience.responsibilities.map((text, i) => (
+						<li key={i} className="list-disc font-light list-inside body-text">
+							{text}
+						</li>
+					))}
+				</ul>
+			</div>
 		</li>
 	);
 };
