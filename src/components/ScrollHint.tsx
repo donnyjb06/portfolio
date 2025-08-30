@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import { Button } from "./Button";
 
 interface ScrollHintProps {
