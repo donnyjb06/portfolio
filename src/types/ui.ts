@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from "react";
+
 interface Props {
 	children: React.ReactNode;
 }
@@ -13,4 +15,9 @@ interface CellProps {
 	delay?: number;
 }
 
-export type { Props, ThemeContext, Theme, CellProps };
+interface ModalContext {
+	isOpen: boolean;
+	setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export type { Props, ThemeContext, Theme, CellProps, ModalContext };
