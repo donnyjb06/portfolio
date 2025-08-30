@@ -4,7 +4,7 @@ import { LiquidButton as AnimatedButton } from "./animate-ui/buttons/liquid";
 interface LiquidButtonProps {
 	Icon: IconType;
 	text: string;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	onClick?: React.MouseEventHandler<HTMLButtonElement> | (() => void);
 	link?: string;
 }
 const LiquidButton = ({ Icon, text, onClick, link }: LiquidButtonProps) => {

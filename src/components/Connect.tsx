@@ -5,8 +5,10 @@ import { PiShareNetworkFill } from "react-icons/pi";
 import LiquidButton from "./LiquidButton";
 import { IoIosDocument } from "react-icons/io";
 import { SiMinutemailer } from "react-icons/si";
+import { useModal } from "../hooks/useModal";
 
 const Connect = ({ delay }: CellProps) => {
+  const {setIsOpen} = useModal();
 	return (
 		<MotionEffect
 			className="grid-cell grid-cell--connect"
@@ -21,7 +23,7 @@ const Connect = ({ delay }: CellProps) => {
         </div>
 
         <div className="grow flex gap-2 flex-wrap">
-          <LiquidButton text="View Resume" Icon={IoIosDocument}/>
+          <LiquidButton text="View Resume" Icon={IoIosDocument} onClick={() => setIsOpen(true)}/>
           <LiquidButton text="Email Me" Icon={SiMinutemailer}/>
         </div>
       </div>
