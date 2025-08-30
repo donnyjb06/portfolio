@@ -6,12 +6,13 @@ import { MdWork } from "react-icons/md";
 import Experience from "./Experience";
 import { ScrollProgress } from "./animate-ui/effects/scroll-progress";
 import { useRef } from "react";
+import ScrollHint from "./ScrollHint";
 
 const Experiences = ({ delay }: CellProps) => {
-  const containerRef = useRef<HTMLDivElement | null>(null)
+	const containerRef = useRef<HTMLDivElement | null>(null);
 	return (
 		<MotionEffect
-      ref={containerRef}
+			ref={containerRef}
 			className="grid-cell grid-cell--experiences  grid-cell--scrollable"
 			{...getMotionProps(delay)}
 		>
@@ -22,7 +23,7 @@ const Experiences = ({ delay }: CellProps) => {
 					damping: 18,
 					mass: 0.3,
 				}}
-        containerRef={containerRef}
+				containerRef={containerRef}
 			/>
 			<div className="grid-cell-container">
 				<div className="grid-cell-heading">
@@ -35,6 +36,7 @@ const Experiences = ({ delay }: CellProps) => {
 					))}
 				</ul>
 			</div>
+			<ScrollHint containerRef={containerRef} />
 		</MotionEffect>
 	);
 };
