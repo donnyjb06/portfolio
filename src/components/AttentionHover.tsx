@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {  useLayoutEffect, useRef, useState } from "react";
 import headshot from "../assets/headshot.jpg";
 import glasses from "../assets/glasses.png";
 import { TEASER_MESSAGES } from "../lib/constants";
