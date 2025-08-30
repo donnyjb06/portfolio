@@ -24,7 +24,7 @@ const Experience = ({ experience }: ExperienceProps) => {
 				<h3 className="font-bold body-text text-primary">
 					{experience.title},{" "}
 					<span className="body-text text-foreground">
-						{experience.company}
+						{experience.company}{`, ${experience.location}`}
 					</span>
 				</h3>
 				<p className="font-extralight body-text">
