@@ -22,7 +22,7 @@ const Connect = ({delay}: CellProps) => {
 			className="grid-cell grid-cell--connect"
 			{...getMotionProps(delay)}
 		>
-			<div className="grid-cell-container p-0">
+			<div className="grid-cell-container p-0 w-full justify-between h-full items-stretch sm:items-center">
 				<div className="flex flex-col items-center gap-2">
 					<div className="w-10 h-10 glass-morphism rounded-[50%] flex items-center justify-center">
 						<PiShareNetworkFill className="text-primary h-6 w-6" />
@@ -30,7 +30,7 @@ const Connect = ({delay}: CellProps) => {
 					<h3 className="subtitle">Let's Work!</h3>
 				</div>
 
-				<div className="grow flex gap-2 flex-wrap lg:flex-nowrap">
+				<div className="grow flex gap-2 flex-wrap lg:flex-nowrap lg:w-full sm:items-end flex-col items-stretch sm:flex-row">
 					<a href="/resume.pdf" download="Donovan_Jabbar_Resume_2025.pdf" className="grow flex-1 sm:max-w-[50%]">
 						<LiquidButton text="Resume" Icon={MdSimCardDownload} className="w-full"/>
 					</a>

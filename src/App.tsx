@@ -8,6 +8,7 @@ import { MOTION_DELAY } from "./lib/constants";
 import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Connect from "./components/Connect";
+import CustomCursor from "./components/CustomCursor";
 
 const CELLS = [
 	Summary,
@@ -20,6 +21,7 @@ const CELLS = [
 function App() {
 	return (
 		<ThemeProvider>
+			<CustomCursor />
 			<StarsBackground className="fixed inset-0 flex items-center justify-center min-h-full" />
 			<GridContainer>
 				{CELLS.map((Cell, i) => {

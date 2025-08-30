@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Props } from '../types/ui'
 
 const PillBox = ({children}: Props) => {
