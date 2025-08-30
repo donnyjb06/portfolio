@@ -12,13 +12,11 @@ const AttentionHover = () => {
 	const hasRun = useRef<boolean>(false)
 
  useEffect(() => {
-    // Skip first render
     if (!hasRun.current) {
       hasRun.current = true;
       return;
     }
 
-    // Only run for large screens and if not hovered
     if (window.innerWidth < 1024 || hasHovered) return;
 
     const visited = localStorage.getItem("hasVisited") === "true";
@@ -27,7 +25,6 @@ const AttentionHover = () => {
     // Mark as visited
     localStorage.setItem("hasVisited", "true");
 
-    // Start teaser cycle after 3 seconds
     showTimeout.current = setTimeout(() => {
       const cycle = () => {
         setMessage(TEASER_MESSAGES[idxRef.current]);
