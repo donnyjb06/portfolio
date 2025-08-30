@@ -27,6 +27,8 @@ function App() {
 			setIsDesktopSize(window.innerWidth > 1024)
 		}
 
+		handleResize();
+		
 		window.addEventListener("resize", handleResize)
 
 		return () => {
