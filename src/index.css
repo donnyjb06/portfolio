@@ -183,11 +183,11 @@
 	}
 
 	.grid-cell--experiences {
-		@apply order-3 overflow-hidden sm:order-2 max-h-[300px] lg:order-2;
+		@apply order-3 overflow-hidden sm:order-2 sm:max-h-[400px] max-h-[300px] lg:order-2;
 	}
 
 	.grid-cell--certifications {
-		@apply order-5 overflow-hidden sm:min-h-[400px] sm:col-span-1 lg:col-span-1 lg:row-span-3  lg:order-3;
+		@apply order-5 overflow-hidden sm:col-span-1 lg:col-span-1 lg:row-span-3  lg:order-3;
 	}
 
 	.grid-cell--technologies {
@@ -195,11 +195,11 @@
 	}
 
 	.grid-cell--projects {
-		@apply max-h-[300px] sm:max-h-none order-4 sm:col-span-1 sm:row-span-2 lg:row-span-2 lg:col-span-2 lg:order-5 lg:max-h-[300px] overflow-hidden;
+		@apply max-h-[300px] sm:max-h-[600px] order-4 sm:col-span-1 sm:row-span-1 lg:row-span-2 lg:col-span-2 lg:order-5 lg:max-h-[300px] overflow-hidden;
 	}
 
 	.grid-cell--connect {
-		@apply order-6;
+		@apply order-6 sm:col-span-2 lg:col-span-1;
 	}
 	.scrollbar-custom {
 		@apply overflow-y-auto scrollbar scrollbar-thumb-muted scrollbar-track-transparent;
