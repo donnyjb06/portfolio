@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Connect from "./components/Connect";
 import CustomCursor from "./components/CustomCursor";
+import { useEffect, useState } from "react";
 
 const CELLS = [
 	Summary,
@@ -19,9 +20,22 @@ const CELLS = [
 	Connect,
 ];
 function App() {
+	const [isDesktopSize, setIsDesktopSize] = useState<boolean>(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsDesktopSize(window.innerWidth > 1024)
+		}
+
+		window.addEventListener("resize", handleResize)
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		}
+	}, [])
 	return (
 		<ThemeProvider>
-			<CustomCursor />
+			{isDesktopSize && <CustomCursor />}
 			<StarsBackground className="fixed inset-0 flex items-center justify-center min-h-full" />
 			<GridContainer>
 				{CELLS.map((Cell, i) => {
