@@ -1,11 +1,10 @@
 import { ThemeContext } from "./Theme.context";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Props, Theme } from "../../types/ui";
 import { getInitialTheme } from "../../lib/utils";
 
 const ThemeProvider = ({ children }: Props) => {
-	const [theme, setTheme] = useState<Theme>("dark");
-	const isFirstRun = useRef(true);
+	const [theme, setTheme] = useState<Theme | null>(null);
 
 	useEffect(() => {
 		const initialTheme = getInitialTheme();
@@ -13,10 +12,7 @@ const ThemeProvider = ({ children }: Props) => {
 	}, [])
 
 	useEffect(() => {
-		if (isFirstRun.current) {
-			isFirstRun.current = false;
-			return;
-		}
+		if (!theme) return;
 
 		if (theme === "dark") {
 			document.body.classList.add("dark");
@@ -30,6 +26,8 @@ const ThemeProvider = ({ children }: Props) => {
 	const toggleTheme = () => {
 		setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
 	};
+	
+	if (!theme) return null
 
 	return (
 		<ThemeContext.Provider value={{ theme, toggleTheme }}>
