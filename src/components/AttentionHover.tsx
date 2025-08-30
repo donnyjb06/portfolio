@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import headshot from "../assets/headshot.jpg";
 import glasses from "../assets/glasses.png";
 import { TEASER_MESSAGES } from "../lib/constants";
@@ -9,53 +9,46 @@ const AttentionHover = () => {
 	const idxRef = useRef(0);
 	const showTimeout = useRef<NodeJS.Timeout | null>(null);
 	const hideTimeout = useRef<NodeJS.Timeout | null>(null);
-	const hasRun = useRef<boolean>(false)
 
- useEffect(() => {
-    if (!hasRun.current) {
-      hasRun.current = true;
-      return;
-    }
+	useLayoutEffect(() => {
+		if (hasHovered) return;
 
-    if (window.innerWidth < 1024 || hasHovered) return;
+		if (typeof window === "undefined") return;
 
-    const visited = localStorage.getItem("hasVisited") === "true";
-    if (visited) return; // Do not run for returning visitors
+		const visited = localStorage.getItem("hasVisited") === "true";
+		if (visited) return;
 
-    // Mark as visited
-    localStorage.setItem("hasVisited", "true");
+		showTimeout.current = setTimeout(() => {
+			const cycle = () => {
+				setMessage(TEASER_MESSAGES[idxRef.current]);
 
-    showTimeout.current = setTimeout(() => {
-      const cycle = () => {
-        setMessage(TEASER_MESSAGES[idxRef.current]);
+				hideTimeout.current = setTimeout(() => {
+					setMessage("");
 
-        hideTimeout.current = setTimeout(() => {
-          setMessage("");
+					showTimeout.current = setTimeout(() => {
+						idxRef.current = (idxRef.current + 1) % TEASER_MESSAGES.length;
+						cycle();
+					}, 5000); // 5s delay before next message
+				}, 1000); // 1s visible
+			};
 
-          showTimeout.current = setTimeout(() => {
-            idxRef.current = (idxRef.current + 1) % TEASER_MESSAGES.length;
-            cycle();
-          }, 5000); // 5s delay before next message
-        }, 1000); // 1s visible
-      };
+			cycle();
+		}, 3000);
 
-      cycle();
-    }, 3000);
-
-    return () => {
-      if (showTimeout.current) clearTimeout(showTimeout.current);
-      if (hideTimeout.current) clearTimeout(hideTimeout.current);
-    };
-  }, [hasHovered]);
+		return () => {
+			if (showTimeout.current) clearTimeout(showTimeout.current);
+			if (hideTimeout.current) clearTimeout(hideTimeout.current);
+		};
+	}, [hasHovered]);
 
 	const handleHover = () => {
 		if (hasHovered) return;
 		setHasHovered(true);
 
-
 		if (showTimeout.current) clearTimeout(showTimeout.current);
 		if (hideTimeout.current) clearTimeout(hideTimeout.current);
 
+		localStorage.setItem("hasVisited", "true")
 		setMessage("Looking this good ain't easy");
 		setTimeout(() => setMessage("welcome to my portfolio"), 2000);
 		setTimeout(() => setMessage(""), 3500);
