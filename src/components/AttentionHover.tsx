@@ -13,7 +13,7 @@ const AttentionHover = () => {
 	useLayoutEffect(() => {
 		if (hasHovered) return;
 
-		if (typeof window === "undefined") return;
+		if (typeof window === "undefined" || window.innerWidth < 1024) return;
 
 		const visited = localStorage.getItem("hasVisited") === "true";
 		if (visited) return;
