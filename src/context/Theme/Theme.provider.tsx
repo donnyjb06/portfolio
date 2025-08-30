@@ -4,8 +4,13 @@ import type { Props, Theme } from "../../types/ui";
 import { getInitialTheme } from "../../lib/utils";
 
 const ThemeProvider = ({ children }: Props) => {
-	const [theme, setTheme] = useState<Theme>(() => getInitialTheme());
+	const [theme, setTheme] = useState<Theme>("dark");
 	const isFirstRun = useRef(true);
+
+	useEffect(() => {
+		const initialTheme = getInitialTheme();
+		setTheme(initialTheme)
+	}, [])
 
 	useEffect(() => {
 		if (isFirstRun.current) {
