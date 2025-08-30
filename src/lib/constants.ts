@@ -40,6 +40,18 @@ const EXPERIENCES: Experience[] = [
 		],
 		location: "Remote",
 	},
+	{
+		company: "Triple Ten July Code Jam",
+		title: "Front End React Developer",
+		startDate: new Date(2025, 6), 
+		endDate: new Date(2025, 6), 
+		responsibilities: [
+			"Led a team of web developers to create a sightseeing route optimizer",
+			"Optimized routes by nearly 45%, improving efficiency and user experience",
+			"Won the Triple Ten July Code Jam competition for the best project",
+		],
+		location: "Remote",
+	},
 ];
 
 const EDUCATION: Education[] = [
