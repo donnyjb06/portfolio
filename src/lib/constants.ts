@@ -18,6 +18,13 @@ import { FaMapPin, FaLanguage } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
 import { DiGoogleCloudPlatform } from "react-icons/di";
 
+const TEASER_MESSAGES = [
+	"hey",
+	"heyyy",
+	"heyyy over here",
+	"hover over me"
+]
+
 const TECH_ICONS: Technology[] = [
 	{ technology: "Tailwind CSS", icon: RiTailwindCssFill },
 	{ technology: "TypeScript", icon: BiLogoTypescript },
@@ -193,4 +200,5 @@ export {
 	PROJECTS,
 	SUMMARY_PILLS,
 	MOTION_DELAY,
+	TEASER_MESSAGES
 };

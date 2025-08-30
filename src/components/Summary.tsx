@@ -1,5 +1,3 @@
-import headshot from "../assets/headshot.jpg";
-import glasses from "../assets/glasses.png";
 import Pill from "./Pill";
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
 import { TypingText } from "./animate-ui/text/typing";
@@ -11,6 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import { getMotionProps } from "../lib/utils";
 import type { CellProps } from "../types/ui";
+import AttentionHover from "./AttentionHover";
 
 const Summary = ({delay}: CellProps) => {
 	return (
@@ -20,18 +19,7 @@ const Summary = ({delay}: CellProps) => {
 		>
 			<div className="flex flex-col justify-between h-full gap-6">
 				<div className="flex gap-4">
-					<div className="relative overflow-hidden shrink-0 group">
-						<img
-							src={headshot}
-							className="rounded-lg"
-							alt="headshot of Donovan Jabbar"
-						/>
-						<img
-							src={glasses}
-							className="absolute -left-10 transition-all ease-out duration-200 group-hover:top-[22px] group-hover:left-7 w-[40px]"
-							alt="8-bit glasses"
-						/>
-					</div>
+				<AttentionHover />
 					<div className="flex flex-col justify-between grow">
 						<div className="flex gap-2 justify-between flex-wrap-reverse">
 							<Pill

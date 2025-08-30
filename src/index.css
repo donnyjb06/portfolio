@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @plugin "tailwind-scrollbar" {
 	nocompatible: true;
-	prefferedStrategy: 'pseudoelements';
+	prefferedstrategy: "pseudoelements";
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -88,6 +88,8 @@
 	--color-background-dark: var(--background-dark);
 	--font-inter: "Inter", sans-serif;
 	--animate-pulse-glow: pulse-glow 2s ease-in-out infinite alternate;
+	--animate-bounce-fade: bounce-fade 2s infinite;
+	--animate-bubble: fade-in-out 1.2s ease-in-out; 
 	--color-glass-bg: var(--glass-bg) --color-foreground: var(--foreground);
 	--color-foreground: var(--foreground);
 	--color-foreground-muted: var(--foreground-muted);
@@ -164,6 +166,7 @@
 }
 
 @layer components {
+
 	.body-text {
 		@apply body-clamp;
 	}
@@ -187,7 +190,7 @@
 	}
 
 	.grid-cell--certifications {
-		@apply order-5 overflow-hidden sm:col-span-1 lg:col-span-1 lg:row-span-3  lg:order-3;
+		@apply order-5 overflow-hidden sm:col-span-1 lg:col-span-1 lg:row-span-3 lg:order-3;
 	}
 
 	.grid-cell--technologies {
@@ -210,7 +213,7 @@
 	}
 
 	.grid-cell-container {
-		@apply flex flex-col items-center gap-4 p-4; 
+		@apply flex flex-col items-center gap-4 p-4;
 	}
 
 	.grid-cell-heading {
@@ -219,11 +222,14 @@
 
 	.cell-list-item {
 		@apply flex flex-col gap-2 p-2 rounded-md glass-morphism;
-	} 
-	
-	.grid-list {
-		@apply flex flex-col gap-4 self-stretch;
 	}
+
+	.grid-list {
+		@apply flex flex-col self-stretch gap-4;
+	}
+}
+@utility speech-bubble {
+		@apply body-clamp z-20 absolute left-18 bg-[hsla(217,100%,30%,0.5)] p-1 text-white rounded-md rounded-bl-none shadow-lg whitespace-nowrap border-border;
 }
 
 @keyframes pulse-glow {
@@ -240,10 +246,31 @@
 }
 
 @keyframes bounce-fade {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(4px); opacity: 1; }
+	0%,
+	100% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+	50% {
+		transform: translateY(4px);
+		opacity: 1;
+	}
 }
 
-.animate-bounce-fade {
-  animation: bounce-fade 2s infinite;
+@keyframes fade-in-out {
+	0% {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+	10% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
 }
