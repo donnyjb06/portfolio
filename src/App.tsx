@@ -9,8 +9,6 @@ import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Connect from "./components/Connect";
 import CustomCursor from "./components/CustomCursor";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const CELLS = [
 	Summary,
@@ -23,8 +21,6 @@ const CELLS = [
 function App() {
 	return (
 		<ThemeProvider>
-			<Analytics />
-			<SpeedInsights />
 			<CustomCursor />
 			<StarsBackground className="fixed inset-0 flex items-center justify-center min-h-full" />
 			<GridContainer>
