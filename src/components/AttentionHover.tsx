@@ -7,6 +7,7 @@ const AttentionHover = () => {
 	const [hasHovered, setHasHovered] = useState<boolean>(false);
 	const [message, setMessage] = useState<string>("");
 	const idxRef = useRef(0);
+	const hasVisited = localStorage.getItem("hasVisited") === "true";
 	const showTimeout = useRef<NodeJS.Timeout | null>(null);
 	const hideTimeout = useRef<NodeJS.Timeout | null>(null);
 
@@ -15,8 +16,15 @@ const AttentionHover = () => {
 
 		if (typeof window === "undefined" || window.innerWidth < 1024) return;
 
-		const visited = localStorage.getItem("hasVisited") === "true";
-		if (visited) return;
+		if (hasVisited) {
+			setMessage("Welcome back!");
+
+			hideTimeout.current = setTimeout(() => {
+				setMessage("");
+			}, 4000)
+			
+			return
+		}
 
 		showTimeout.current = setTimeout(() => {
 			const cycle = () => {
@@ -39,10 +47,10 @@ const AttentionHover = () => {
 			if (showTimeout.current) clearTimeout(showTimeout.current);
 			if (hideTimeout.current) clearTimeout(hideTimeout.current);
 		};
-	}, [hasHovered]);
+	}, [hasHovered, hasVisited]);
 
 	const handleHover = () => {
-		if (hasHovered) return;
+		if (hasHovered || hasVisited) return;
 		setHasHovered(true);
 
 		if (showTimeout.current) clearTimeout(showTimeout.current);
