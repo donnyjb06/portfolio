@@ -28,8 +28,8 @@ const AttentionHover = () => {
 					showTimeout.current = setTimeout(() => {
 						idxRef.current = (idxRef.current + 1) % TEASER_MESSAGES.length;
 						cycle();
-					}, 5000); // 5s delay before next message
-				}, 1000); // 1s visible
+					}, 5000);
+				}, 1000);
 			};
 
 			cycle();
